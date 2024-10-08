@@ -11,10 +11,7 @@ class States:
         self.states = self.content['state'].tolist()
 
     def create_lack(self):
-        states_lacking = [state for state in self.states]
-        for st in self.completed_states:
-            if st in self.states:
-                states_lacking.remove(st)
+        states_lacking = [state for state in self.states if state not in self.completed_states]
         file = pandas.DataFrame(states_lacking)
         file.to_csv("Forgotten_states.csv")
 
