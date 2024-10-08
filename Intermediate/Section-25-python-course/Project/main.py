@@ -15,24 +15,22 @@ ttl.shape(image)
 sco.scoreboard()
 scr.tracer(0)
 
-
-def states_game():
-    game = True
-    while game:
-        scr.update()
-        guess = scr.textinput("States", "Guess a state from USA:").title().lower()
-        if guess == "exit":
-            st.create_lack()
-            game = False
+game = True
+while game:
+    scr.update()
+    guess = scr.textinput("States", "Guess a state from USA:").title().lower()
+    if guess == "exit":
+        st.create_lack()
+        game = False
+    else:
+        if st.check_guess(guess):
+            sco.add_point(do_it=True)
         else:
-            if st.check_guess(guess):
-                sco.add_point(do_it=True)
-            else:
-                sco.add_point()
+            sco.add_point()
 
-        if len(st.completed) == 50:
-            st.you_won()
-            game = True
+    if len(st.completed) == 50:
+        st.you_won()
+        game = True
 
 
 scr.exitonclick()
