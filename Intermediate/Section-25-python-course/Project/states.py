@@ -16,7 +16,7 @@ class States:
             if st in self.states:
                 states_lacking.remove(st)
         file = pandas.DataFrame(states_lacking)
-        file.to_csv("Forgotten_states.cvs")
+        file.to_csv("Forgotten_states.csv")
 
     def check_guess(self, guess):
         guess = guess[0].upper() + guess[1:]
