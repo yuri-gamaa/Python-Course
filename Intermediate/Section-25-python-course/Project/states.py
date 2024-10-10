@@ -21,6 +21,7 @@ class States:
         if guess in self.states:
             self.locate_st(guess)
             self.completed_states.append(guess)
+            print(self.completed_states)
             return True
         else:
             return False
