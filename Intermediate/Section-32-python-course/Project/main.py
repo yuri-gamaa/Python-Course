@@ -41,7 +41,7 @@ for i in range(0, len(content)):
 
         with smt.SMTP('smtp.gmail.com') as mail:
             mail.starttls()
-            mail.login(user='aperfilaleatorio@gmail.com', password='ygcw lrht cglq tdcl')
+            mail.login(user='aperfilaleatorio@gmail.com', password='SOME_PASSWORD')
             mail.sendmail(from_addr='aperfilaleatorio@gmail.com',
                           to_addrs=content.iloc[i, 1],
                           msg=f"Subject:Happy Birthday\n\n{new_text}")
