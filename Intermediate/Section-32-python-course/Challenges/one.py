@@ -5,7 +5,7 @@ from random import choice
 
 def send_text(motivational_text):
     email = "aperfilaleatorio@gmail.com"
-    passwd = "ygcw lrht cglq tdcl"
+    passwd = "SOME_PASSWORD"
 
     with mail_.SMTP("smtp.gmail.com") as sm:
         sm.starttls()
